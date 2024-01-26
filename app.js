@@ -1,5 +1,5 @@
 const yargs = require('yargs')
-const fu = require('./functions')
+const create = require('./utils/functions')
 
 yargs.command({
     command: 'create-project',
@@ -23,8 +23,8 @@ yargs.command({
 
     },
     handler(argv){
-        fu.createFolder(argv.name)
-        fu.createFiles(argv.mvc)
+        create.createFolder(argv.name)
+        create.createFiles(argv.mvc)
     }
 })
 
